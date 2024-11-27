@@ -1,7 +1,7 @@
-export const TabButton = ({ children }: any) => {
+export const TabButton = ({ children, onSelect, isSelected }: any) => {
     return (
         <li>
-            <button>{children}</button>
+            <button className={isSelected ? 'active' : ''} onClick={onSelect}>{children}</button>
         </li>
     );
 }
